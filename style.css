@@ -70,3 +70,85 @@ footer {
     transform: scale(1.1) rotate(-1.3deg);
     filter: invert(0%);
 }
+
+.imagem-container{
+    height: 90%;
+    width: 90%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.slide{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+.slide:target{
+    z-index: 999;
+    opacity: 100%;
+}
+
+.slide .fechar{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    user-select: none;
+    text-decoration: none;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.541);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    transition: all .1s linear;
+    z-index: 4;
+}
+
+.slide .fechar:hover{
+    background-color: rgb(255, 60, 0);
+}
+
+.slide .navegacao{
+    position: absolute;
+    background-color: tan;
+    color: white;
+    font-size: 3rem;
+    user-select: none;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.541);
+    width: 40px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .1s linear;
+}
+
+.slide .navegacao:hover{
+    background-color: rgba(78, 78, 78, 0.664);
+}
+
+.slide .anterior{
+    left: 0;
+}
+
+.slide .proximo{
+    right: 0;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+}
