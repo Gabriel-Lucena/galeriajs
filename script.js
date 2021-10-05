@@ -99,13 +99,7 @@ const criarItem = (urlImagem) => {
     // `
 
     const novoLink = document.createElement("a")
-
-    //                              1 - nome do arquivo com extensão
-    //                              2 - retira os três últimos caracteres
-    //                              1                        2
-    novoLink.href = "#" + urlImagem.replace(/^.*[\\\/]/, '').slice(0, -4)
-
-    novoLink.href = "#" + urlImagem.split("/")[2].split(".")[0]
+    novoLink.href = `#${limparId(urlImagem)}`
     novoLink.classList.add("galeria-itens")
     novoLink.innerHTML = `
     <img src="${urlImagem}" alt="">
